@@ -1,3 +1,7 @@
+/**
+ * Allows objects to observe objects and be notified of changes.
+ */
+
 function Emitter() {
   this.events = {}
 }
