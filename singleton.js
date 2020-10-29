@@ -16,7 +16,7 @@ console.log(user1) // User { name: 'David', age: 20 }
 const user2 = new User('Mark', 23)
 console.log(user2) // User { name: 'David', age: 20 }
 
-// Open module + singleton
+// Module + singleton
 const singleton = (function() {
   let instance;
 
