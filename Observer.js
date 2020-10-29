@@ -12,7 +12,7 @@ Emitter.prototype.on = function(type, listener) {
 }
 
 Emitter.prototype.emit = function(type) {
-  if(this.events[type]) {
+  if (this.events[type]) {
     this.events[type].forEach(f => f())
   }
 }

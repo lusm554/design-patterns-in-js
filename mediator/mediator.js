@@ -5,7 +5,7 @@
 const mediator = (function() {
   // Add channel and callback to the mediator's channels
   function subscribe(channel, fn) {
-    if(!mediator.channels[channel]) {
+    if (!mediator.channels[channel]) {
       mediator.channels[channel] = []
     }
     mediator.channels[channel].push({
@@ -17,7 +17,7 @@ const mediator = (function() {
 
   // Call callbacks of the channel 
   function publish(channel, ...args) {
-    if(!mediator.channels[channel]) return false;
+    if (!mediator.channels[channel]) return false;
     for(let subscription of mediator.channels[channel]) {
       subscription.callback.apply(subscription.context, args)
     }
