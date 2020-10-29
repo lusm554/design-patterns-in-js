@@ -2,8 +2,7 @@ let instance;
 function User(name, age) {
   if (instance) {
     return instance
-  } 
-
+  }
   instance = this
   this.name = name
   this.age = age
@@ -39,4 +38,4 @@ const singleton = (function() {
 let a = singleton.getInstance('Sasha', 32)
 let b = singleton.getInstance('Mark', 25)
 
-console.log(a === b)
+console.log(a === b) // true
